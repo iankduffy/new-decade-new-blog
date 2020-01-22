@@ -1,0 +1,72 @@
+.u-t-cen {
+  text-align: center;
+}
+
+.u-t-r {
+  text-align: right;
+}
+
+.u-mar-t-auto {
+  margin-top: auto;
+}
+
+%u-t-cen\@md,
+.u-t-cen\@md {
+  @include breakpoint-max(md) {
+    &{
+      text-align: center;
+    }
+  }
+}
+
+%u-t-cen\@lg,
+.u-t-cen\@lg {
+  @include breakpoint-max(lg) {
+    &{
+      text-align: center;
+    }
+  }
+}
+
+%u-t-l\@md,
+.u-t-l\@md {
+  @include breakpoint-max(md) {
+    &{
+      text-align: left;
+    }
+  }
+}
+
+.u-flex-self--end {
+  align-self: flex-end
+}
+
+.u-pos-rel {
+  position: relative;
+}
+
+.u-t-b{
+  font-weight: 800;
+}
+
+.u-full-height {
+  min-height: 100vh;
+}
+
+.u-bor-r {
+  border-right: $primary-color 1px solid; 
+}
+
+.u-bor-gen {
+  @include breakpoint-max(md) {
+    border-right: none;
+  }
+
+  @include breakpoint-min(md) {
+    border-right: $primary-color 1px solid; 
+  }
+}
+
+.u-stretch {
+  flex-grow: 1;
+}

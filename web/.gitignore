@@ -1,0 +1,15 @@
+
+package-lock.json
+
+# next.js
+.next/
+/out/
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+.env
+
+# production
+/build

@@ -1,0 +1,130 @@
+$sizesmq: 0, xs, sm, md, lg;
+
+@each $key, $size in $sizes {
+  @each $class, $dir in $direction {
+    
+    %u-pad-#{$class}-#{$key}, 
+    .u-pad-#{$class}-#{$key} {
+      padding-#{$dir}: $size;
+    }
+
+    %u-mar-#{$class}-#{$key},
+    .u-mar-#{$class}-#{$key} {
+      margin-#{$dir}: $size;
+    }
+
+    @each $mq, $sizemq in $sizesmq {
+      .u-pad-#{$class}-#{$key}\@#{$mq} {
+        @include breakpoint-max($mq) {
+          padding-#{$dir}: $size !important;
+        }
+      }
+
+      .u-mar-#{$class}-#{$key}\@#{$mq} {
+        @include breakpoint-max($mq) {
+          margin-#{$dir}: $size !important;
+        }
+      }
+    }
+
+    @each $mq, $sizemq in $sizesmq {
+      .u-pad-#{$class}-#{$key}\@#{$mq}-min {
+        @include breakpoint-min($mq) {
+          padding-#{$dir}: $size !important;
+        }
+      }
+
+      .u-mar-#{$class}-#{$key}\@#{$mq}-min {
+        @include breakpoint-min($mq) {
+          margin-#{$dir}: $size !important;
+        }
+      }
+    }
+  }
+
+  %u-pad-v-#{$key},
+  .u-pad-v-#{$key} {
+    padding-top: $size;
+    padding-bottom: $size;
+  }
+
+  %u-pad-h-#{$key},
+  .u-pad-h-#{$key} {
+    padding-left: $size;
+    padding-right: $size;
+  }
+
+  %u-mar-v-#{$key},
+  .u-mar-v-#{$key} {
+    margin-top: $size;
+    margin-bottom: $size;
+  }
+
+  %u-mar-h-#{$key},
+  .u-mar-h-#{$key} {
+    margin-left: $size;
+    margin-right: $size;
+  }
+
+  @each $mq, $sizemq in $sizesmq {
+    
+    .u-pad-h-#{$key}\@#{$mq} {
+      @include breakpoint-max($mq) {
+        padding-left: $size;
+        padding-right: $size;
+      }
+    }
+
+    .u-pad-v-#{$key}\@#{$mq} {
+      @include breakpoint-max($mq) {
+        padding-top: $size;
+        padding-bottom: $size;
+      }
+    }
+
+    .u-mar-h-#{$key}\@#{$mq} {
+      @include breakpoint-max($mq) {
+        margin-left: $size;
+        margin-right: $size;
+      }
+    }
+
+    .u-mar-v-#{$key}\@#{$mq} {
+      @include breakpoint-max($mq) {
+        margin-top: $size;
+        margin-bottom: $size;
+      }
+    }
+  }
+
+  @each $mq, $sizemq in $sizesmq {
+    
+    .u-pad-h-#{$key}\@#{$mq}-min {
+      @include breakpoint-min($mq) {
+        padding-left: $size;
+        padding-right: $size;
+      }
+    }
+
+    .u-pad-v-#{$key}\@#{$mq}-min {
+      @include breakpoint-min($mq) {
+        padding-top: $size;
+        padding-bottom: $size;
+      }
+    }
+
+    .u-mar-h-#{$key}\@#{$mq}-min {
+      @include breakpoint-min($mq) {
+        margin-left: $size;
+        margin-right: $size;
+      }
+    }
+
+    .u-mar-v-#{$key}\@#{$mq}-min {
+      @include breakpoint-min($mq) {
+        margin-top: $size;
+        margin-bottom: $size;
+      }
+    }
+  }
+}

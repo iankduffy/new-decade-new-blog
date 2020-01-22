@@ -1,0 +1,13 @@
+@for $i from 1 through 5 {
+ .u-order-#{$i}{
+   order: $i;
+ }
+
+  @each $mq, $size in $sizesmq {
+    .u-order-#{$i}\@#{$mq} {
+      @include breakpoint-max($mq) {
+        order: $i;
+      }
+    }
+  }
+}
