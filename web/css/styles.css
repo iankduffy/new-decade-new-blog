@@ -4748,6 +4748,228 @@ h4,
   margin-bottom: 0.4rem;
 }
 
+.o-header {
+  background: #223a57;
+  width: 100px;
+  height: 100vh;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+@media (max-width: 1025px) {
+  .o-header {
+    width: 100vw;
+    bottom: 0;
+    height: 12vh;
+    top: auto;
+    background: #EEEEEE;
+    -webkit-box-shadow: -1px 5px 18px 0px #282828;
+            box-shadow: -1px 5px 18px 0px #282828;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (max-width: 1025px) {
+  .o-header__logo {
+    background: #223a57;
+    width: 20vw;
+    padding: 1%;
+    height: 20vw;
+    border-radius: 100px;
+    position: absolute;
+    top: -35%;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    max-width: 100px;
+    max-height: 100px;
+  }
+}
+
+.o-header__group {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+@media (max-width: 1025px) {
+  .o-header__group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 40%;
+            flex: 0 1 40%;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+}
+
+.o-header__link {
+  color: #fff;
+  text-align: center;
+  margin: 20px 0;
+  padding: 5px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-transform: uppercase;
+  font-size: 0.90rem;
+  text-align: center;
+}
+
+@media (max-width: 1025px) {
+  .o-header__link {
+    color: #223a57;
+    margin: 0 5px;
+    max-height: 9vh;
+  }
+}
+
+.icon {
+  padding: 5px;
+  fill: none;
+  stroke: #223a57;
+  stroke-width: 10px;
+  max-width: 60px;
+  max-height: 70px;
+  margin: 0 auto 5px;
+  padding: 0;
+}
+
+@media (min-width: 1025px) {
+  .icon {
+    stroke: #fff;
+    padding: 5px;
+  }
+}
+
+.icon-code {
+  stroke-width: 3px;
+}
+
+main {
+  margin-left: 100px;
+  display: block;
+}
+
+@media (max-width: 1025px) {
+  main {
+    margin-left: 0;
+    margin-bottom: 110px;
+  }
+}
+
+.c-screen {
+  min-height: 80vh;
+  height: 0px;
+  background-image: url("/slash.jpg");
+  background-size: cover;
+  position: relative;
+  color: #fff;
+}
+
+.c-screen:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(34, 58, 87, 0.7);
+  z-index: 1;
+}
+
+.c-screen * {
+  z-index: 2;
+  position: relative;
+}
+
+@media (max-width: 738px) {
+  .c-screen {
+    min-height: 75vh;
+  }
+}
+
+.c-profile-pic {
+  background-image: url(/profile-image.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  width: 70vw;
+  height: 70vw;
+  border-radius: 50%;
+  border: #fff 10px solid;
+  text-transform: uppercase;
+  margin: 0 auto;
+}
+
+@media (min-width: 738px) {
+  .c-profile-pic {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+.u-transition-in {
+  -webkit-animation: 700ms linear 0ms animateIn;
+          animation: 700ms linear 0ms animateIn;
+}
+
+@-webkit-keyframes animateIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(10%);
+            transform: translateY(10%);
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@keyframes animateIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(10%);
+            transform: translateY(10%);
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
 .c-btn {
   display: block;
   padding: 12px 10px;

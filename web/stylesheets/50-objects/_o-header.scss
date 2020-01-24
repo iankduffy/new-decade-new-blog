@@ -1,0 +1,99 @@
+.o-header {
+  background: $primary-color;
+  width: 100px;
+  height: 100vh;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  @include breakpoint-max(lg) {
+    width: 100vw;
+    bottom: 0;
+    height: 12vh;
+    top: auto;
+    background: #EEEEEE;
+    box-shadow: -1px 5px 18px 0px $black;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo{
+    @include breakpoint-max(lg) {
+      background: $primary-color;
+      width: 20vw;
+      padding: 1%;
+      height: 20vw;
+      border-radius: 100px;
+      position: absolute; 
+      top: -35%;
+      left: 50%;
+      transform: translate(-50%, 0);
+      display: flex;
+      justify-content: center;
+      max-width: 100px;
+      max-height: 100px;
+    }
+  }
+
+  &__group {
+    justify-content: flex-start;
+    @include breakpoint-max(lg) {
+      display: flex;
+      flex: 0 1 40%;
+      justify-content: space-evenly;
+      align-items: flex-end;
+    }
+  }
+
+  &__link {
+    color: #fff;
+    text-align: center;
+    margin: 20px 0;
+    padding: 5px 0;
+    display: flex; 
+    flex-direction: column;
+    text-transform: uppercase;
+    font-size: 0.90rem;
+    text-align: center;
+    @include breakpoint-max(lg) {
+      color: $primary-color;
+      margin: 0 5px;
+      max-height: 9vh;
+
+    }
+  }
+}
+
+.icon {
+  padding: 5px;
+  fill: none; 
+  stroke: $primary-color;
+  stroke-width: 10px;
+  max-width: 60px;
+  max-height: 70px;
+  margin: 0 auto 5px;
+  padding: 0;
+  @include breakpoint-min(lg) {
+    stroke: $white;
+    padding: 5px;
+
+  }
+
+  &-code {
+    stroke-width: 3px;
+  }
+}
+
+// This is for the space between the side of the page and the main
+
+main {
+  margin-left: 100px;
+  display: block;
+
+  @include breakpoint-max(lg) {
+    margin-left: 0;
+    margin-bottom: 110px;
+  }
+}
