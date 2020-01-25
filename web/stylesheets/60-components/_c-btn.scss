@@ -17,4 +17,14 @@
 
 .c-full-width {
   background: #5E6F84;
+
+  &--image {
+    overflow: hidden;
+    transition: 500ms;
+    &:hover {
+      img {
+        transform: scale(1.1)
+      }
+    }
+  }
 }

@@ -23,9 +23,9 @@ html {
   scroll-padding-top: 50px;
 
   scroll-padding-top: 20px;
-  font-size: 13px; 
+  font-size: 14px; 
   @include breakpoint-min(md) {
-    font-size: 14px;
+    font-size: 15px;
   }
   @include breakpoint-min(lg) {
     font-size: 16px;

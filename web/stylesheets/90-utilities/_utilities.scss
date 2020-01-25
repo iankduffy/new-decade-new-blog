@@ -70,3 +70,7 @@
 .u-stretch {
   flex-grow: 1;
 }
+
+.u-animate {
+  transition: $base-transition-time;
+}
