@@ -13,6 +13,12 @@ app.prepare()
     return handle(req, res)
   })
 
+  server.get('/posts/:id', (req, res) => {
+    const actualPage = `/posts/${req.params.id}`
+    const queryParams = { id: req.params.id } 
+    app.render(req, res, actualPage, queryParams)
+  })
+  
   server.listen(3000, (err) => {
     if (err) throw err
     console.log('> Ready on http://localhost:3000')
