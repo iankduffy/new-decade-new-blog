@@ -6,7 +6,7 @@ const PostLink = ({props}) => {
   const { slug, title, summary} = props
 
   return (
-    <Link href={{pathname: "/posts/[slug]"}} as={`/posts/${slug.current}`} >
+    <Link href={{pathname: "/posts/[post]"}} as={`/posts/${slug.current}`} >
       <a>
         <h1>{title}</h1>
         <BlockContent
