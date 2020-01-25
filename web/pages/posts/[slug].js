@@ -1,10 +1,12 @@
-// import { useRouter } from 'next/router'
+import { useRouter } from 'next/router'
 import client from '../../client'
 import '../../stylesheets/styles.scss'
 import groq from 'groq'
 import BlockContent from '@sanity/block-content-to-react'
 
 const Post = (props) => {
+  const router = useRouter()
+  const { pid } = router.query
 
   const { title = 'Missing title', name = 'Missing name', categories, body } = props
 

@@ -16,6 +16,12 @@ const Nav = () => {
   return(
     <div className="o-header u-pad-h-sm">
       <Link href="#"><a className="o-header__logo" onClick={(e) => scrollTo(e, "home")}><img className="u-pad-h-sm" src="/Logo.svg" alt="ID logo"/></a></Link>
+
+      <p>Blog Home</p>
+      <p>Portfolio</p>
+      <p>Contact Me</p>
+
+
     </div>
   )
 }

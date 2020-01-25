@@ -3,7 +3,7 @@ import '../stylesheets/styles.scss'
 
 import Nav from '../components/nav'
 
-export default ({ children, title = 'Ian Duffy | Blog | Web Developer' }) => (
+export default ({ children, title = 'My Blog | Ian Duffy |  Web Developer' }) => (
   <div>
     <Head>
       <title>{title}</title>
