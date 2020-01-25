@@ -8,9 +8,8 @@ const Post = (props) => {
   const router = useRouter()
   const { pid } = router.query
 
-  const { title = 'Missing title', name = 'Missing name', categories, body } = props
+  const { title = 'Missing title', name = 'Missing name', categories } = props
 
-  // console.log(categories)
 
   return(
     <div>
@@ -24,11 +23,11 @@ const Post = (props) => {
         </ul>
       )}
 
-      <BlockContent
+      {/* <BlockContent
         blocks={body}
         imageOptions={{ w: 320, h: 240, fit: 'max' }}
         {...client.config()}
-      />
+      /> */}
 
     </div>
   )
@@ -37,8 +36,7 @@ const Post = (props) => {
 const query = groq`*[_type == "post" && slug.current == $slug][0]{
   title,
   "name": author->name,
-  "categories": categories[]->title,
-  body
+  "categories": categories[]->title
 }`
 
 Post.getInitialProps = async function (context) {

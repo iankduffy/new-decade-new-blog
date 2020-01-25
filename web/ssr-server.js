@@ -12,12 +12,6 @@ app.prepare()
   server.get('*', (req, res) => {
     return handle(req, res)
   })
-
-  server.get('/posts/:id', (req, res) => {
-    const actualPage = `/posts/${req.params.id}`
-    const queryParams = { id: req.params.id } 
-    app.render(req, res, actualPage, queryParams)
-  })
   
   server.listen(3000, (err) => {
     if (err) throw err
