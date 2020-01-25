@@ -39,11 +39,11 @@ const query = groq`*[_type == "post" && slug.current == $slug][0]{
   "categories": categories[]->title
 }`
 
-Post.getInitialProps = async function (context) {
+Post.getInitialProps = async ({ query: { slug } }) => {
   const document = await client.fetch(`*[_type == "post" && slug.current == $slug][0]{
     title,
     "name": author->name
   }`, { slug })
-return document
+  return document
 }
 export default Post
