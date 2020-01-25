@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "node ssr-server.js",
     "build": "next build",
-    "deploy": "yarn build", 
+    "deploy": "yarn build",
     "export": "next build && next export"
   },
   "dependencies": {
