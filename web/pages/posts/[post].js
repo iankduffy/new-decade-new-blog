@@ -5,12 +5,18 @@ import groq from 'groq'
 import BlockContent from '@sanity/block-content-to-react'
 
 const Post = (props) => {
+  // const router = useRouter()
+  // const { pid } = router.query
+
+  // console.log({router})
+  console.log({props})
+
+
 
   const { 
     title = 'Missing title', 
     name = 'Missing name', 
     categories } = props
-
 
   return(
     <div>
@@ -42,7 +48,4 @@ Post.getInitialProps = async function (context) {
   const { slug = "" } = context.query
   return await client.fetch(query, { slug })
 }
-
-
-
 export default Post
