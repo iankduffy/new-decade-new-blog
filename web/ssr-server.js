@@ -13,10 +13,11 @@ app.prepare()
     return handle(req, res)
   })
 
-  server.get('/posts/:id', (req, res) => {
-    const actualPage = `/posts/${req.params.id}`
-    const queryParams = { post: req.params.id } 
-    app.render(req, res, actualPage, queryParams)
+  server.get('/posts/:post', (req, res) => {
+    const actualPage = `/posts/${req.params.post}`
+    const mergedQuery = Object.assign({}, req.query, req.params);
+    console.log(`req = ${mergedQuery}`)
+    return app.render(req, res, actualPage, mergedQuery)
   })
   
   server.listen(3000, (err) => {

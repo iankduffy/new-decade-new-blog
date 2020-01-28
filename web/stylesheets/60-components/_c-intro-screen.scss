@@ -1,11 +1,10 @@
 .c-screen {
-  min-height: 80vh;
-  height: 0px;
-  background-image: url("/slash.jpg");
   background-size: cover;
+  background-position: center; 
   position: relative;
   color: #fff;
-
+  min-height: 60vh;
+  
   &:after {
     content: ""; 
     position: absolute; 
@@ -23,8 +22,18 @@
   }
 
   @include breakpoint-max(md) {
-    min-height: 90vh;
+    min-height: 70vh;
   }
+
+  &--intro-page{
+    min-height: 80vh;
+    background-image: url("/slash.jpg");
+
+    @include breakpoint-max(md) {
+      min-height: 90vh;
+    }
+  }
+
 }
 
 .c-profile-pic {

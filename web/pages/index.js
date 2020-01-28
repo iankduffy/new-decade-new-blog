@@ -13,7 +13,6 @@ const Index = (props) => {
     <div>
       <SplashScreen />
       <AboutMe/>
-      <FullWidthLink />
 
       <div className="col-12 u-pad-v-lg container">
         <h2>All Blog Posts</h2>
@@ -29,7 +28,7 @@ Index.getInitialProps = async () => ({
   posts: await client.fetch(groq`
   *[_type == "post"]|order(publishedAt desc){
       title, 
-      slug,
+      "post": slug,
       "imageUrl": mainImage.asset->url, 
       summary, 
       tagline

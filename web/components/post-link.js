@@ -4,13 +4,14 @@ import client from '../client'
 import { truncate } from '../lib/truncate'
 
 const PostLink = ({props}) => {  
-  const { slug, title, summary, imageUrl, tagline} = props
+  const { post, title, summary, imageUrl, tagline} = props
+  console.log({props})
   
   const desc = truncate(tagline, 250)
 
   return (
     <div className="col-4@md col-12">
-      <Link href={{pathname: "/posts/[post]"}} as={`/posts/${slug.current}`} >
+      <Link href={{pathname: "/posts/[post]"}} as={`/posts/${post.current}`} >
         <a className={`c-project`}>
           <div className="c-project__image u-mar-b-md">
               <img src={imageUrl ? imageUrl : "/slash.jpg"} lazy="true" alt={title ? title : "code on the screen"} />

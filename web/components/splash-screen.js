@@ -1,7 +1,7 @@
 import ProfilePic from '../components/c-profile-pic'
 
 const SplashScreen = () => (
-  <div className="c-screen u-pad-h-md container__row--v-center u-dis-flex" id="home">
+  <div className="c-screen c-screen--intro-page u-pad-h-md container__row--v-center u-dis-flex" id="home">
     	<div className="container container__row--v-center flex-column-tablet  u-transition-in"> 
 				<div className="col-5@lg col-12 u-mar-r-md@md u-pad-v-md"><ProfilePic/></div>
 				<div className="col-7@md col-12 container container__column">
