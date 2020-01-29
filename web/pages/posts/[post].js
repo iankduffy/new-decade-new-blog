@@ -11,14 +11,15 @@ const Post = (props) => {
     title = 'Missing title', 
     authorName = 'Missing name', 
     categories, 
-    imageUrl, 
-    body } = props
+    imageUrl = "/slash.jpg", 
+    body, 
+    tagline = "" } = props
 
   return(
     <div>
-      <PostSplashScreen title={title} authorName={authorName} imageUrl={imageUrl}/>
+      <PostSplashScreen title={title} authorName={authorName} imageUrl={imageUrl} tagline={tagline}/>
 
-      <div className="col-8@md container u-pad-v-lg u-pad-h-md">
+      <div className="col-12 col-8@lg container u-pad-v-lg u-pad-h-md">
         <BlockContent
           blocks={body}
           imageOptions={{ w: 320, h: 240, fit: 'max' }}
@@ -37,7 +38,8 @@ Post.getInitialProps = async ({query}) => {
     "categories": categories[]->title,
     "authorImage": author->image,
     "imageUrl": mainImage.asset->url,
-    body
+    body, 
+    tagline
   }`
 
   // It's important to default the slug so that it doesn't return "undefined"

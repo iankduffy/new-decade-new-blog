@@ -6,18 +6,18 @@ import AboutMe from '../components/about-me'
 import FullWidthLink from '../components/full-width-link'
 
 
-const Index = (props) => {
-  console.log(props)
+const Index = ({posts}) => {
+  // console.log(props)
 
   return (
     <div>
       <SplashScreen />
       <AboutMe/>
 
-      <div className="col-12 u-pad-v-lg container">
+      <div className="col-12 u-pad-v-md container">
         <h2>All Blog Posts</h2>
         <div className="container container__row u-pad-h-0">
-          {props.posts.map((post, key) => { return <PostLink key={key} props={post} /> } )}
+          { posts.map((post, key) => { return <PostLink key={key} props={post} /> })}
         </div>
       </div>
     </div>

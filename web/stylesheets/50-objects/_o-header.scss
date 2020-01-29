@@ -16,7 +16,7 @@
     background: #EEEEEE;
     box-shadow: -1px 5px 18px 0px $black;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 
   &__logo{
@@ -94,6 +94,6 @@ main {
 
   @include breakpoint-max(lg) {
     margin-left: 0;
-    margin-bottom: 110px;
+    margin-bottom: 90px;
   }
 }

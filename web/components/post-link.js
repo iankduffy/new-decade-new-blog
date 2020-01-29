@@ -5,7 +5,7 @@ import { truncate } from '../lib/truncate'
 
 const PostLink = ({props}) => {  
   const { post, title, summary, imageUrl, tagline} = props
-  console.log({props})
+  // console.log({props})
   
   const desc = truncate(tagline, 250)
 
@@ -18,7 +18,7 @@ const PostLink = ({props}) => {
           </div>
           <div className="u-pad-h-sm u-pad-b-md">
             <h3>{title}</h3>
-            <p>{ desc }</p>
+            <p>{desc}</p>
           </div>
           <button className="c-project__btn">Read Blog</button>
         </a>

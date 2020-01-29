@@ -18,6 +18,11 @@ export default {
       }
     },
     {
+      name: 'tagline',
+      title: 'Tagline',
+      type: 'string'
+    },
+    {
       name: 'author',
       title: 'Author',
       type: 'reference',

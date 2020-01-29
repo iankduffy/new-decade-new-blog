@@ -7,7 +7,7 @@ const Summary = () => {
       <h2>Summary</h2>
     </div>
     <div className="col-9@md col-12 u-pad-l-lg u-pad-l-0@md">
-      <BlockContent />
+      {/* <BlockContent /> */}
     </div>
   </div>
   )
