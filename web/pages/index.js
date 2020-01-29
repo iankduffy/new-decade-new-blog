@@ -17,7 +17,7 @@ const Index = ({posts}) => {
       <div className="col-12 u-pad-v-md container">
         <h2>All Blog Posts</h2>
         <div className="container container__row u-pad-h-0">
-          { posts.map((post, key) => { return <PostLink key={key} props={post} /> })}
+          { posts.map((post, key) => { return <PostLink key={key} props={post} /> }) }
         </div>
       </div>
     </div>
