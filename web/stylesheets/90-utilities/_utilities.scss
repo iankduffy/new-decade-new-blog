@@ -53,6 +53,10 @@
   min-height: 100vh;
 }
 
+.u-bor-primary {
+  border: 1px solid $primary-color;
+}
+
 .u-bor-r {
   border-right: $primary-color 1px solid; 
 }
@@ -73,4 +77,9 @@
 
 .u-animate {
   transition: $base-transition-time;
+}
+
+.u-pos-sticky {
+  position: sticky; 
+  top: 20px;
 }

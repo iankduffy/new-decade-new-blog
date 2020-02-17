@@ -1,9 +1,11 @@
-import { useRouter } from 'next/router'
+// import { useRouter } from 'next/router'
 import client from '../../client'
 import '../../stylesheets/styles.scss'
 import groq from 'groq'
 import BlockContent from '@sanity/block-content-to-react'
 import PostSplashScreen from '../../components/post-splash-screen'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithubSquare, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons'
 
 const Post = (props) => {
 
@@ -19,13 +21,29 @@ const Post = (props) => {
     <div>
       <PostSplashScreen title={title} authorName={authorName} imageUrl={imageUrl} tagline={tagline}/>
 
-      <div className="col-12 col-8@lg container u-pad-v-lg u-pad-h-md">
+      <article className="col-12 container container__row u-pad-v-lg u-pad-h-md">
         <BlockContent
           blocks={body}
           imageOptions={{ w: 320, h: 240, fit: 'max' }}
           {...client.config()}
+          className="col-8@lg"
         />
-      </div>
+        <div className="col-12 col-4@lg u-pad-l-md u-pad-l-0@lg u-pos-sticky" >
+          <div className="u-bor-primary u-pad-v-sm u-pad-h-md c-author">
+            <div className="c-profile-pic c-profile-pic__mini">
+            </div>
+            <p>Hello I’m Ian Duffy, Web Developer living in Leeds, UK</p>
+            <p>Enjoys designing and building websites, using multiple languages and tools. Currently working with Ruby on Rails site with ES6 and SASS, projects using Javascript, ReactJS and other frameworks.</p>
+            <p>Previously worked as a designer using the Adobe Creative Cloud, as well done bits of animation, 3D modelling and game development.</p>
+            <div className="container__row container--space-evenly u-mar-t-md">
+              <a className="o-link" href="https://github.com/iankduffy" aria-label="My Github" target="_blank" rel="noopener"><FontAwesomeIcon icon={faGithubSquare} /></a>
+              <a className="o-link" href="https://www.linkedin.com/in/iankduffy" aria-label="My Linkedin" target="_blank" rel="noopener"><FontAwesomeIcon icon={faLinkedin} /></a>
+              <a className="o-link" href="https://www.instagram.com/duffeh_leeds/" aria-label="My Instagram" target="_blank" rel="noopener"><FontAwesomeIcon icon={faInstagram} /></a>
+            </div>
+          </div>
+        </div>
+      </article>
+      
     </div>
   )
 }

@@ -51,6 +51,13 @@
     width: 350px;
     height: 350px;
   }
+
+  &__mini {
+    width: 75px; 
+    height: 75px;
+    border: #fff 1px solid;
+    margin-bottom: 20px;
+  }
 }
 
 .u-transition-in {
