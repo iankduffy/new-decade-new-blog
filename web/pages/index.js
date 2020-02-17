@@ -4,12 +4,14 @@ import PostLink from '../components/post-link'
 import SplashScreen from '../components/splash-screen'
 import AboutMe from '../components/about-me'
 import FullWidthLink from '../components/full-width-link'
+import Layout from '../components/layout'
 
 
 const Index = ({posts}) => {
   // console.log(props)
 
   return (
+    <Layout >
     <div>
       <SplashScreen />
       {/* <AboutMe/> */}
@@ -21,6 +23,7 @@ const Index = ({posts}) => {
         </div>
       </div>
     </div>
+    </Layout>
   )
 }
 
