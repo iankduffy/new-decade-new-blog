@@ -18,7 +18,7 @@ const Index = ({posts}) => {
 
       <div className="col-12 u-pad-v-md container">
         {/* <h2>All Blog Posts</h2> */}
-        <div className="container container__row u-pad-h-0">
+        <div className="container container__row u-pad-h-0 o-flex-al-stretch">
           { posts.map((post, key) => { return <PostLink key={key} props={post} /> }) }
         </div>
       </div>
