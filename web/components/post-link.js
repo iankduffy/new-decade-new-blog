@@ -10,17 +10,16 @@ const PostLink = ({props}) => {
   const desc = truncate(tagline, 250)
 
   return (
-    <div className="col-4@md col-12">
+    <div className="col-6@md col-12 u-mar-b-md">
       <Link href={{pathname: "/posts/[post]"}} as={`/posts/${post.current}`} >
         <a className={`c-project`}>
-          <div className="c-project__image u-mar-b-md">
-              <img src={imageUrl ? imageUrl : "/slash.jpg"} lazy="true" alt={title ? title : "code on the screen"} />
+          <div className="c-project__image col-6">
+            <div className="img" style={{backgroundImage: `url(${imageUrl ? imageUrl : "/slash.jpg"})`}}></div>
           </div>
-          <div className="u-pad-h-sm u-pad-b-md">
-            <h3>{title}</h3>
+          <div className="u-pad-h-sm u-pad-v-sm col-6">
+            <h4>{title}</h4>
             <p>{desc}</p>
           </div>
-          <button className="c-project__btn">Read Blog</button>
         </a>
       </Link>
     </div>
