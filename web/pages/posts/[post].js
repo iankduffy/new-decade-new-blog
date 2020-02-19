@@ -27,7 +27,7 @@ const Post = (props) => {
         <article className="col-12 container container__row u-pad-v-lg u-pad-h-md">
           <BlockContent
             blocks={body}
-            imageOptions={{ w: 800, h: 240, fit: 'max' }}
+            imageOptions={{ w: 800, fit: 'max' }}
             {...client.config()}
             className="col-8@lg"
           />
