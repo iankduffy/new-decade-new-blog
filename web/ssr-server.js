@@ -16,7 +16,7 @@ app.prepare()
   server.get('/posts/:post', (req, res) => {
     const actualPage = `/posts/${req.params.post}`
     const mergedQuery = Object.assign({}, req.query, req.params);
-    console.log(`req = ${mergedQuery}`)
+    // console.log(`req = ${mergedQuery}`)
     return app.render(req, res, actualPage, mergedQuery)
   })
   

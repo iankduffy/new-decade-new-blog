@@ -7,9 +7,11 @@ import PostSplashScreen from '../../components/post-splash-screen'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithubSquare, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons'
 import Layout from '../../components/layout'
-
+import { GoogleAnalytics } from "../../components/googleAnalytics.js"
 
 const Post = (props) => {
+
+  GoogleAnalytics()
 
   const { 
     title = 'Missing title', 
@@ -65,7 +67,7 @@ Post.getInitialProps = async ({query}) => {
 
   // It's important to default the slug so that it doesn't return "undefined"
   const slug = query.slug ? query.slug : query.post
-  console.log(`Here ${query.slug} ${query.post}`)
+  // console.log(`Here ${query.slug} ${query.post}`)
 
   return await client.fetch(request, { slug })
 }

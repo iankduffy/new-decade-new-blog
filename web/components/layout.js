@@ -2,18 +2,10 @@ import Head from 'next/head'
 import '../stylesheets/styles.scss'
 
 import Nav from '../components/nav'
-import { initGA, logPageView } from "../components/googleAnalytics.js"
+// import { initGA, logPageView } from "../components/googleAnalytics.js"
 import { useEffect } from 'react'
 
 export default ({ children, title = 'My Blog | Ian Duffy |  Web Developer', desc = "Web Developer: What Do I Know? Do I Know Things?? Let's Find Out!" }) => {
-  
-  useEffect(() => {
-    if (!window.GA_INITIALIZED) {
-      initGA()
-      window.GA_INITIALIZED = true
-      logPageView(window.location.pathname);
-    }
-  }, [])
 
   return (
 

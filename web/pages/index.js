@@ -5,24 +5,26 @@ import SplashScreen from '../components/splash-screen'
 import AboutMe from '../components/about-me'
 import FullWidthLink from '../components/full-width-link'
 import Layout from '../components/layout'
-
+import { GoogleAnalytics } from "../components/googleAnalytics.js"
 
 const Index = ({posts}) => {
   // console.log(props)
+  GoogleAnalytics()
 
   return (
     <Layout >
-    <div>
-      <SplashScreen />
-      {/* <AboutMe/> */}
+      
+      <div>
+        <SplashScreen />
+        {/* <AboutMe/> */}
 
-      <div className="col-12 u-pad-v-md container">
-        {/* <h2>All Blog Posts</h2> */}
-        <div className="container container__row u-pad-h-0 o-flex-al-stretch u-mar-b-lg">
-          { posts.map((post, key) => { return <PostLink key={key} props={post} /> }) }
+        <div className="col-12 u-pad-v-md container">
+          {/* <h2>All Blog Posts</h2> */}
+          <div className="container container__row u-pad-h-0 o-flex-al-stretch u-mar-b-lg">
+            { posts.map((post, key) => { return <PostLink key={key} props={post} /> }) }
+          </div>
         </div>
       </div>
-    </div>
     </Layout>
   )
 }
