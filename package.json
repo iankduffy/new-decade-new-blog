@@ -6,9 +6,9 @@
   "author": "Ian Duffy <ian.duffy@shiftcommerce.com>",
   "license": "MIT",
   "dependencies": {
-    "@sanity/cli": "^0.147.8",
+    "@sanity/cli": "^1.149.9",
     "lerna": "^3.20.2"
-  }, 
+  },
   "scripts": {
     "build": "lerna run build --parallel",
     "build-web": "lerna bootstrap && (cd web && yarn export)",
