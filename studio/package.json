@@ -12,7 +12,7 @@
     "test": "sanity check"
   },
   "keywords": [
-    "sanity", 
+    "sanity",
     "blog"
   ],
   "dependencies": {
